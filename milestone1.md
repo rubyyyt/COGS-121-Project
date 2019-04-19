@@ -1,3 +1,5 @@
+Milestone 1 (due Monday 4/22 at 11:59pm)
+
 1. Your team name (please pick something memorable but family-friendly and appropriate)
 
 2. Team members: Rubaiat Tazim, Warren Chen, Will Knox. 

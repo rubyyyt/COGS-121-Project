@@ -6,12 +6,12 @@ Our app’s target population are philanthropists and the less fortunate. This f
 
 
 Storyboards:
-![](assets/Cogs121_milestone1-43284ab6.JPG)
+![](IMG_7465.jpg)
 
-![](assets/Cogs121_milestone1-a57fa8bd.jpg)
+![](IMG_7466.jpg)
 
 Paper Prototypes:
 
-![](assets/Cogs121_milestone1-a6b1cbe9.jpg)
+![](IMG_7467.jpg)
 
-![](assets/Cogs121_milestone1-b03587be.jpg)
+![](IMG_7468.JPG)

@@ -1,0 +1,14 @@
+{
+  "name": "Just Cause",
+  "version": "1.0.0",
+  "description": "An app that helps connect philanthropists to public schools in need of sponsors.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Rubaiat Tazim, Warren Chen, Will Knox",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

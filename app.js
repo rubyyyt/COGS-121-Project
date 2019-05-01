@@ -5,6 +5,7 @@ const app = express(); //assign to variable (express)
 const path = require('path');
 
 app.use(express.static('static_files')); //so app can serve static files
+app.use(express.static('views'));		 //use views too?
 
 const fakeDatabase = {
 	'miramonte': {location: 'Orinda', income: 'High', pic: 'miramonte.jpg'},

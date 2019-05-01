@@ -1,5 +1,8 @@
+// TODO: add ES lint
+
 const express = require('express'); //import express library 
 const app = express(); //assign to variable (express)
+const path = require('path');
 
 app.use(express.static('static_files')); //so app can serve static files
 
@@ -9,6 +12,13 @@ const fakeDatabase = {
 	'concordhigh': {location: 'Concord', income: 'Medium', pic: 'concordhigh.jpg'},
 	'saintignacious': {location: 'San Francisco', income: 'Very High', pic: 'siprep.jpg'}
 };
+
+app.set('views', __dirname + '/views');
+app.engine('html', require('ejs').renderFile);
+
+app.get('/', (req, res) => {
+	res.send('hello world');
+});
 
 app.get('/schools', (req, res) => {
 	const allSchools = Object.keys(fakeDatabase);

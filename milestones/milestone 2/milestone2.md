@@ -12,7 +12,8 @@ Screenshots of UI Skeleton: (they must be embedded here, not linked)
 ![](registerSchool.png)
 
 Written explanation of how screenshots are similar to or differ from our paper prototypes in milestone1.md:
-Our screens interact differently than how we proposed on the paper prototype.
+
+Our screens interact differently than how we proposed on the paper prototype. Our skeleton is not aesthetically quite there just yet compared to our paper prototype, but that gives us more realistic designs to implement. In milestone 1, we wanted to have interaction between philanthropists and individual people who would be required to make profiles. Since we changed our idea to interaction between philanthropists and public schools, they do not need to make as detailed a profile anymore (so our screenshots do not require details such as age and gender). We do not have the tag function like we proposed in milestone 1 because we decided to narrow results by location instead.
 
 What real data we want to use and how we will obtain it:
 	

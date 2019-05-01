@@ -4,10 +4,10 @@ const app = express(); //assign to variable (express)
 app.use(express.static('static_files')); //so app can serve static files
 
 const fakeDatabase = {
-	'Miramonte': {location: 'Orinda', income: 'High', pic: 'miramonte.jpg'},
-	'Oakland Tech': {location: 'Oakland', income: 'Low', pic: 'otech.jpg'},
-	'Concord High': {location: 'Concord', income: 'Medium', pic: 'concordhigh.jpg'},
-	'Saint Ignacious': {location: 'San Francisco', income: 'Very High', pic: 'siprep.jpg'}
+	'miramonte': {location: 'Orinda', income: 'High', pic: 'miramonte.jpg'},
+	'oaklandtech': {location: 'Oakland', income: 'Low', pic: 'otech.jpg'},
+	'concordhigh': {location: 'Concord', income: 'Medium', pic: 'concordhigh.jpg'},
+	'saintignacious': {location: 'San Francisco', income: 'Very High', pic: 'siprep.jpg'}
 };
 
 app.get('/schools', (req, res) => {
@@ -24,7 +24,7 @@ app.get('/schools/:schoolid', (req, res) => {
 		res.send(val)
 	}
 	else {
-		res.sned({}); //fail for returning empty object
+		res.send({}); //fail for returning empty object
 	}
 });
 

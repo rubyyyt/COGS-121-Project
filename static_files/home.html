@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Just Cause</title>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script type ="text/javascript">
+
+$(document).ready(() => {
+	
+	$('#testbutton').click(() => {
+		const requestURL = 'schools/' + $('#nameBox').val();
+
+		$.ajax({
+			url: requestURL,
+			type: 'GET',
+			dataType: 'json',
+			success: (data) => {
+
+				if(data.location && data.pic && data.income) {
+					$('schoolNameDiv').html(data);
+					$('locationDiv').html('Location: ' + data.location);
+					$('incomeDiv').html('Income Class: ' + data.income);
+					$('schoolImage').attribute('src', data.pic);
+				} else {
+					$('schoolNameDiv').html('');
+					$('locationDiv').html('');
+					$('incomeDiv').html('');
+					$('schoolImage').attribut('');
+				}
+
+
+				}
+			};
+		});
+	});
+
+
+
+	$('#allSchoolsButton').click(() => {
+		$.ajax({
+			url: 'schools/',
+			type: 'GET',
+			dataType: 'json',
+			success: (data) => {
+				$('#status').html('All schools: ' + data);
+			};
+		});
+	});
+});
+</script>
+
+</head>
+<body>
+  <h1>Just Cause: Skeleton Homepage</h1>
+
+  Name: <input id="nameBox" type="text" size="20"/>
+  <button id="testbutton">Test School Return</button>
+  <button id="allSchoolsButton">List all Schools to Fund</button>
+
+  <div id="schoolNameDiv"></div>
+  <div id="locationDiv"></div>
+  <div id="incomeDiv"></div>
+  <img id="schoolImage"></body>
+
+
+</body>
+</html>

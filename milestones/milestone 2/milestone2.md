@@ -12,7 +12,7 @@ Screenshots of UI Skeleton: (they must be embedded here, not linked)
 ![](registerSchool.png)
 
 Written explanation of how screenshots are similar to or differ from our paper prototypes in milestone1.md:
-
+Our screens interact differently than how we proposed on the paper prototype.
 
 What real data we want to use and how we will obtain it:
 	

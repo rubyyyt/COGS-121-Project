@@ -1,42 +1,35 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://www.w3.org/Style/Examples/007/fonts.en.html">
 <head>
-<title>Just Cause</title>
-
-<script src="jquery-3.3.1.min.js"></script>
 
 <script type ="text/javascript">
-
 $(document).ready(() => {
-	
-	$('#testButton').click(() => {
-		const requestURL = 'schools/' + $('#nameBox').val();
 
+	$('#testbutton').click(() => {
+		const requestURL = 'schools/' + $('#nameBox').val();
 		$.ajax({
 			url: requestURL,
 			type: 'GET',
 			dataType: 'json',
 			success: (data) => {
-
-				if(data) {
-					//$('#schoolNameDiv').html(data);
-					$('#locationDiv').html('Location: ' + data.location);
-					$('#incomeDiv').html('Income Class: ' + data.income);
-					$('#schoolImage').attr('src', data.pic).attr('width', '300px');
+				if(data.location && data.pic && data.income) {
+					$('schoolNameDiv').html(data);
+					$('locationDiv').html('Location: ' + data.location);
+					$('incomeDiv').html('Income Class: ' + data.income);
+					$('schoolImage').attribute('src', data.pic);
 				} else {
-					$('#schoolNameDiv').html('');
-					$('#locationDiv').html('');
-					$('#incomeDiv').html('');
-					$('#schoolImage').attr('width', '0px');
+					$('schoolNameDiv').html('');
+					$('locationDiv').html('');
+					$('incomeDiv').html('');
+					$('schoolImage').attribute('');
 				}
-
-
 				}
 			};
 		});
 	});
-
-
-
 	$('#allSchoolsButton').click(() => {
 		$.ajax({
 			url: 'schools/',
@@ -44,24 +37,53 @@ $(document).ready(() => {
 			dataType: 'json',
 			success: (data) => {
 				$('#status').html('All schools: ' + data);
-			},
+			};
 		});
 	});
 });
 </script>
 
 </head>
-<body>
-  <h1>Just Cause: Skeleton Homepage</h1>
+<style>
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #006699;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
-  Name: <input id="nameBox" type="text" size="20"/>
-  <button id="testButton">Test School Return</button>
-  <button id="allSchoolsButton">List all Schools to Fund</button>
+body {
+	background-color: #f2f2f2
+}
+</style>
+
+<body>
+	<h1 style="color:#6C6F7D"> Just Cause </h1>
+
+  Test School Return: <br/> <input id="nameBox" type="text" size="20";/>
+	<div id="button">
+  <button class="button">Search</button> <br/><br/>
+	</div>
+	School to Fund: <br/> <input id="nameBox" type="text" size="20"/>
+	<div id="button">
+	<button class="button">Search</button>
+</div><br/>
+	<a href="/login.html" id="login">Log Out</a>
+
+
 
   <div id="schoolNameDiv"></div>
   <div id="locationDiv"></div>
   <div id="incomeDiv"></div>
-  <img id="schoolImage"> </img>
+  <img id="schoolImage"></body>
 
 
 </body>

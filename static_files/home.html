@@ -5,7 +5,8 @@
  <link rel="stylesheet" href="https://www.w3.org/Style/Examples/007/fonts.en.html">
 <head>
 
-<script type ="text/javascript">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script language = "javascript">
 $(document).ready(() => {
 
 	$('#testbutton').click(() => {
@@ -40,6 +41,12 @@ $(document).ready(() => {
 			};
 		});
 	});
+	//map onload
+	$(function(){
+  	$(".mapLoader").click(function(){
+    $("#mapDisplay").load();
+  });
+});
 });
 </script>
 
@@ -63,18 +70,34 @@ $(document).ready(() => {
 body {
 	background-color: #f2f2f2
 }
+
+.map {
+  display: inline-block;
+  padding: 20px 15px;
+  text-decoration: none;
+  outline: none;
+}
 </style>
 
 <body>
 	<h1 style="color:#6C6F7D"> Just Cause </h1>
 
-  Test School Return: <br/> <input id="nameBox" type="text" size="20";/>
+	<a href="TODO ACTIVATE MAP SEARCH" id="schoolSearchButton"> Search Schools Near Me </a>
+	<div id="map">
+  		<iframe 
+  			width="60%" 
+  			height="40%" 
+  			frameborder="1" 
+  			style="border:1" 
+  			src="https://www.google.com/maps/embed/v1/search?q=public%20schools%20near%20me&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8" 
+  			allowfullscreen>
+  		</iframe>
+  	</div>
+
+  Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
 	<div id="button">
-  <button class="button">Search</button> <br/><br/>
+  <button class="button">Find</button> <br/><br/>
 	</div>
-	School to Fund: <br/> <input id="nameBox" type="text" size="20"/>
-	<div id="button">
-	<button class="button">Search</button>
 </div><br/>
 	<a href="/login.html" id="login">Log Out</a>
 

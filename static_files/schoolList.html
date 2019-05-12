@@ -1,0 +1,33 @@
+<html>
+<!--to the list of the nearest schools on map load-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script language = "javascript">
+$(document).ready(() => {
+
+	
+	var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
+	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+	var latitude;
+	var longitude;
+	function success(position) {
+    	latitude  = position.coords.latitude;
+    	longitude = position.coords.longitude;
+    };
+	r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
+	y = r['results'];
+
+	for(var c in y) {
+		$('#toFill').map(y[c]['names']).appendTo('body');
+
+	}
+});
+
+
+
+
+
+</script>
+
+<div id="toFill"></div>
+
+</html>

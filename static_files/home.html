@@ -30,21 +30,11 @@ $(document).ready(() => {
 				}
 			});
 		});
-	$('#allSchoolsButton').click(() => {
-		$.ajax({
-			url: 'schools/',
-			type: 'GET',
-			dataType: 'json',
-			success: (data) => {
-				$('#status').html('All schools: ' + data);
-			}
-		});
-	});
 	//map onload
 	$(function() {
     	$('#loadMap').on("click", (function() {
       	  $('#map').load("maps.html");
-      	  return false;
+      	  $('#schoolList').load("schoolList.html");
     	}));
 	});
 });
@@ -82,8 +72,9 @@ body {
 <body>
 	<h1 style="color:#6C6F7D"> Just Cause </h1>
 
-	<button class="button" id="loadMap">Show Schools Near Me</button>
+	<button class="button" id="loadMap">Show Schools Near Me</button><br/>
 	<div id="map"></div><br/>
+	<div id="schoolList>"></div>
 
   Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
 	<div id="button">

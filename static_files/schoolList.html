@@ -4,7 +4,7 @@
 <script language = "javascript">
 $(document).ready(() => {
 
-	
+
 	var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
 	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
 	var latitude;
@@ -17,7 +17,7 @@ $(document).ready(() => {
 	y = r['results'];
 
 	for(var c in y) {
-		$('#toFill').map(y[c]['names']).appendTo('body');
+		$('#toFill').append("<li>y[c]['name'], y[c]['formatted_address']</li>");
 
 	}
 });

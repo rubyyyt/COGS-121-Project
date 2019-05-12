@@ -1,6 +1,6 @@
 // TODO: add ES lint
 
-const express = require('express'); //import express library 
+const express = require('express'); //import express library
 const app = express(); //assign to variable (express)
 const path = require('path');
 
@@ -39,6 +39,51 @@ app.get('/schools/:schoolid', (req, res) => {
 	}
 });
 
-app.listen(3000, () => {
-	console.log("Server started at http://localhost:3000");
+
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;mongoose.connect("mongodb://localhost:27017/cogs-121-project");
+
+//displays register.html file that we created
+app.use("/", (req, res) => {
+ res.sendFile(__dirname + "/register.html");
+});
+
+app.get("/", (req, res) => {
+ res.send("Hello World");
+});
+
+//defines schema
+var nameSchema = new mongoose.Schema({
+ schoolname: String,
+});
+
+//create model from schema
+var User = mongoose.model("User", nameSchema);
+
+//framework of endpoint
+app.post("/register.html", (req, res) => {
+
+});
+
+//adds the body-parser middleware to our application and configure it
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//final endpoint
+app.post("/register.html", (req, res) => {
+ var myData = new User(req.body);
+ myData.save()
+ .then(item => {
+ res.send("item saved to database");
+ })
+ .catch(err => {
+ res.status(400).send("unable to save to database");
+ });
+});
+
+var port = 3000;
+
+app.listen(port, () => {
+ console.log("Server listening on port " + port);
 });

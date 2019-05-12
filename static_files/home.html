@@ -28,9 +28,8 @@ $(document).ready(() => {
 					$('schoolImage').attribute('');
 				}
 				}
-			};
+			});
 		});
-	});
 	$('#allSchoolsButton').click(() => {
 		$.ajax({
 			url: 'schools/',
@@ -38,15 +37,16 @@ $(document).ready(() => {
 			dataType: 'json',
 			success: (data) => {
 				$('#status').html('All schools: ' + data);
-			};
+			}
 		});
 	});
 	//map onload
-	$(function(){
-  	$(".mapLoader").click(function(){
-    $("#mapDisplay").load();
-  });
-});
+	$(function() {
+    	$('#loadMap').on("click", (function() {
+      	  $('#map').load("maps.html");
+      	  return false;
+    	}));
+	});
 });
 </script>
 
@@ -82,23 +82,14 @@ body {
 <body>
 	<h1 style="color:#6C6F7D"> Just Cause </h1>
 
-	<a href="TODO ACTIVATE MAP SEARCH" id="schoolSearchButton"> Search Schools Near Me </a>
-	<div id="map">
-  		<iframe 
-  			width="60%" 
-  			height="40%" 
-  			frameborder="1" 
-  			style="border:1" 
-  			src="https://www.google.com/maps/embed/v1/search?q=public%20schools%20near%20me&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8" 
-  			allowfullscreen>
-  		</iframe>
-  	</div>
+	<button class="button" id="loadMap">Show Schools Near Me</button>
+	<div id="map"></div><br/>
 
   Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
 	<div id="button">
-  <button class="button">Find</button> <br/><br/>
+  		<button class="button">Find</button> <br/><br/>
 	</div>
-</div><br/>
+	</div><br/>
 	<a href="/login.html" id="login">Log Out</a>
 
 

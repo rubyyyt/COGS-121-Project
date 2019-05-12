@@ -40,6 +40,13 @@ $(document).ready(() => {
 			};
 		});
 	});
+
+	$(function() {
+    $('.classloader').click(function() {
+        $('#map').load('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=public%20schools%20near%20me&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8" allowfullscreen></iframe>');
+        return false;
+    });
+});
 });
 </script>
 
@@ -82,16 +89,7 @@ body {
   <div id="incomeDiv"></div>
   <img id="schoolImage"></body>
 
-  <div id="map">
-  	<iframe 
-  		width="600" 
-  		height="450" 
-  		frameborder="0" 
-  		style="border:0" 
-  		src="https://www.google.com/maps/embed/v1/search?q=public%20schools%20near%20me&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8" 
-  		allowfullscreen>
-  	</iframe>
-  </div>
+  <div id="map"></div>
 
 <!--back button-->
   <div class = "back">

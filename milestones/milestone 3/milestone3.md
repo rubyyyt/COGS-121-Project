@@ -1,6 +1,6 @@
-![](index.png)
-![](login.png)
-![](register.png)
+![](index.jpg)
+![](login.jpg)
+![](register.jpg)
 
 
 Written Explanation:

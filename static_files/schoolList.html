@@ -1,33 +1,58 @@
 <html>
 <!--to the list of the nearest schools on map load-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8&libraries=places"></script>
 <script language = "javascript">
 $(document).ready(() => {
 
-
-	var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
-	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+	var map;
+	var service;
+	var infowindow;
 	var latitude;
 	var longitude;
+	var key = "";
+	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+	//get userlocation
 	function success(position) {
     	latitude  = position.coords.latitude;
     	longitude = position.coords.longitude;
     };
-	r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
-	y = r['results'];
+	//r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
+	//y = r['results'];
 
-	for(var c in y) {
-		$('#toFill').append("<li>y[c]['name'], y[c]['formatted_address']</li>");
 
+	//initialize the map
+	function initialize() {
+  		var pyrmont = new google.maps.LatLng(latitude, longitude);
+
+  		map = new google.maps.Map(document.getElementById('map'), {
+      		center: pyrmont,
+      		zoom: 15
+    	});
+  		//setup the search request for nearby public schools
+  		var request = {
+    		location: pyrmont,
+    		radius: '80467',
+    		type: ['school'],
+    		keyword: 'public'
+  		};
+
+  		service = new google.maps.places.PlacesService(map);
+  		service.nearbySearch(request, callback);
 	}
+	//call the search to fill results with search returns
+	function callback(results, status) {
+  		if (status == google.maps.places.PlacesServiceStatus.OK) {
+    		for (var i = 0; i < results.length; i++) {
+      			var place = results[i];
+      			$('#toFill').append(results[i]['name']);
+			}
+		}
+	}	
 });
-
-
-
-
-
 </script>
 
+<!--div to be filled and displayed on homepage-->
 <div id="toFill"></div>
 
 </html>

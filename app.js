@@ -45,7 +45,7 @@ mongoose.Promise = global.Promise;mongoose.connect("mongodb://localhost:27017/co
 
 //displays register.html file that we created
 app.use("/", (req, res) => {
- res.sendFile(__dirname + "/register.html");
+ res.sendFile(__dirname + "/registerSchool.html");
 });
 
 app.get("/", (req, res) => {
@@ -61,7 +61,7 @@ var nameSchema = new mongoose.Schema({
 var User = mongoose.model("User", nameSchema);
 
 //framework of endpoint
-app.post("/register.html", (req, res) => {
+app.post("/registerSchool.html", (req, res) => {
 
 });
 
@@ -71,7 +71,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //final endpoint
-app.post("/register.html", (req, res) => {
+app.post("/registerSchool.html", (req, res) => {
  var myData = new User(req.body);
  myData.save()
  .then(item => {

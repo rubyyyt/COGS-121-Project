@@ -27,7 +27,7 @@
 <script language = "javascript">
 $(document).ready(() => {
 
-	$('#testbutton').click(() => {
+	/*$('#loadMap').click(() => {
 		const requestURL = 'schools/' + $('#nameBox').val();
 		$.ajax({
 			url: requestURL,
@@ -35,8 +35,8 @@ $(document).ready(() => {
 			dataType: 'json',
 			success: (data) => {
 				if(data.location && data.pic && data.income) {
-					$('schoolNameDiv').html(data);
-					$('locationDiv').html('Location: ' + data.location);
+					$('').html(data);
+					$('schoolList').html('Location: ' + data.location);
 					$('incomeDiv').html('Income Class: ' + data.income);
 					$('schoolImage').attribute('src', data.pic);
 				} else {
@@ -47,7 +47,7 @@ $(document).ready(() => {
 				}
 				}
 			});
-		});
+		});*/
 	//map onload
 	$(function() {
     	$('#loadMap').on("click", (function() {
@@ -257,11 +257,6 @@ $(document).ready(() => {
                 <button class="button">Find</button> <br/><br/>
             </div>
             </div><br/>
-
-            <div id="schoolNameDiv"></div>
-            <div id="locationDiv"></div>
-            <div id="incomeDiv"></div>
-            <img id="schoolImage"></body>
 
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

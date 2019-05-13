@@ -8,3 +8,8 @@ You can confirm that your project is not simply using data from a text file (suc
 You can properly use the Network Inspector tab in your web browser's developer tools (e.g., Chrome, Safari, Firefox) to show your TA exactly what data is being passed between the frontend and backend (or external web API) during these Ajax interactions. (2 points)
 You can properly explain to your TA how your database or external data API interaction works in detail by walking through the code that you wrote for it, both in your frontend and backend. (3 points)
 You tell your TA a plausible plan for how you are going to meaningfully display or visualize the data on the frontend for future milestones. You don't need to necessarily stick with this plan, but you must at least propose a plan.
+
+
+Written Explanation:
+
+	Our UI has been completely redone using a bootstrap theme we found to be thematically relevant to our concept. Additionally, there's a lot more place for new functionalities which we have not yet implemented, but now have the framework to do so later in the project. We added an API call to one of the buttons that dynamically loads a map object on click, and are working on loading a list of markers that show up on said map object using an AJAX call.

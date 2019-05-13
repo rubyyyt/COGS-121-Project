@@ -1,4 +1,4 @@
-![](index.jpg)
+![](index.JPG)
 ![](login.jpg)
 ![](register.jpg)
 

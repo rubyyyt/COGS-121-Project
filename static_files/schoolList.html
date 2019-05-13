@@ -13,6 +13,15 @@ $(document).ready(() => {
 	var key = "";
 	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
 	//get userlocation
+	var x = document.getElementById("toFill");
+	function getLocation() {
+  		if (navigator.geolocation) {
+    		navigator.geolocation.getCurrentPosition(showPosition);
+  		} else {
+    		x.innerHTML = "Geolocation is not supported by this browser.";
+  		}
+	}
+
 	function success(position) {
     	latitude  = position.coords.latitude;
     	longitude = position.coords.longitude;
@@ -23,7 +32,7 @@ $(document).ready(() => {
 
 	//initialize the map
 	function initialize() {
-  		var pyrmont = new google.maps.LatLng(latitude, longitude);
+  		var localt = new google.maps.LatLng(latitude, longitude);
 
   		map = new google.maps.Map(document.getElementById('map'), {
       		center: local,
@@ -34,7 +43,7 @@ $(document).ready(() => {
     		location: local,
     		radius: '80467',
     		type: ['school'],
-    		keyword: 'public'
+    		
   		};
 
   		service = new google.maps.places.PlacesService(map);

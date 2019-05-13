@@ -27,32 +27,41 @@
 <script language = "javascript">
 $(document).ready(() => {
 
-	/*$('#loadMap').click(() => {
-		const requestURL = 'schools/' + $('#nameBox').val();
-		$.ajax({
-			url: requestURL,
-			type: 'GET',
-			dataType: 'json',
-			success: (data) => {
-				if(data.location && data.pic && data.income) {
-					$('').html(data);
-					$('schoolList').html('Location: ' + data.location);
-					$('incomeDiv').html('Income Class: ' + data.income);
-					$('schoolImage').attribute('src', data.pic);
-				} else {
-					$('schoolNameDiv').html('');
-					$('locationDiv').html('');
-					$('incomeDiv').html('');
-					$('schoolImage').attribute('');
-				}
-				}
-			});
-		});*/
+	$('#loadMap').click(() => {
+    var latitude = 32.8843264;
+    var longitude = -117.21523;
+    var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
+    var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+    //get location
+    /*var x = document.getElementById("schoolList");
+    function getLocation() {
+        if (navigator.geolocation) {
+          function success(position) {
+            latitude  = position.coords.latitude;
+            longitude = position.coords.longitude;
+          };
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }*/
+
+    const requestURL = url + 'location=' + latitude + ',' + longitude + '&radius=80467.2&type=school&keyword=public&key=' + key;
+    $.ajax({
+      url: requestURL,
+      type: 'GET',
+      dataType: 'text/html',
+      success: (data) => {
+        //WHY WONT YOU WORK
+        console.log('You received some data!', data);
+        }
+
+      });
+  });
+
 	//map onload
 	$(function() {
     	$('#loadMap').on("click", (function() {
       	  $('#map').load("maps.html");
-      	  $('#schoolList').load("schoolList.html");
     	}));
 	});
 });

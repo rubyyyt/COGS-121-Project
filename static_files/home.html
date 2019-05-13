@@ -9,33 +9,48 @@
 <script language = "javascript">
 $(document).ready(() => {
 
-	$('#testbutton').click(() => {
-		const requestURL = 'schools/' + $('#nameBox').val();
-		$.ajax({
-			url: requestURL,
-			type: 'GET',
-			dataType: 'json',
-			success: (data) => {
-				if(data.location && data.pic && data.income) {
-					$('schoolNameDiv').html(data);
-					$('locationDiv').html('Location: ' + data.location);
-					$('incomeDiv').html('Income Class: ' + data.income);
-					$('schoolImage').attribute('src', data.pic);
-				} else {
-					$('schoolNameDiv').html('');
-					$('locationDiv').html('');
-					$('incomeDiv').html('');
-					$('schoolImage').attribute('');
-				}
-				}
-			});
-		});
 	//map onload
 	$(function() {
     	$('#loadMap').on("click", (function() {
-      	  $('#map').load("maps.html");
-      	  $('#schoolList').load("schoolList.html");
-    	}));
+      		$('#map').load("maps.html");
+      		
+      		//load school list
+      	 	var latitude = 32.8843264;
+    		var longitude = -117.21523;
+    		var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
+    		var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+    		var map;
+			var service;
+			var infowindow;
+
+			function initialize() {
+  				var UCSD = new google.maps.LatLng(latitude, longitude);
+
+  				map = new google.maps.Map(document.getElementById('map'), {
+      				center: UCSD,
+      				zoom: 15
+    			});
+
+  				var request = {
+    				location: UCSD,
+    				radius: '80467.2',
+    				type: ['school'],
+    				keyword: 'public'
+  				};
+
+  				service = new google.maps.places.PlacesService(map);
+  				service.nearbysearch(request, callback);
+			}
+
+			function callback(results, status) {
+  				if (status == google.maps.places.PlacesServiceStatus.OK) {
+    				for (var i = 0; i < results.length; i++) {
+      					$('#schoolList').append('results[i]');
+    				}
+  				}
+			}
+    
+		}));
 	});
 });
 </script>
@@ -74,7 +89,7 @@ body {
 
 	<button class="button" id="loadMap">Show Schools Near Me</button><br/>
 	<div id="map"></div><br/>
-	<div id="schoolList>"></div>
+	<div id="schoolList"></div>
 
   Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
 	<div id="button">

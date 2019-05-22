@@ -4,7 +4,7 @@ const express = require('express'); //import express library
 const app = express(); //assign to variable (express)
 const path = require('path');
 
-app.use(express.static('static_files')); //so app can serve static files
+app.use(express.static('static_files')); //so app can serve static file
 app.use(express.static('views'));		 //use views too?
 
 const fakeDatabase = {

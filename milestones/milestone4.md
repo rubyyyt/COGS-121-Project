@@ -1,3 +1,3 @@
 
-![](home.JPG)
-![](register.JPG)
+![](home.png)
+![](register.png)

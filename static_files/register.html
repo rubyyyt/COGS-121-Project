@@ -2,6 +2,62 @@
 <html lang="en">
 
 <head>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCWq9-GYwLhQJvJXbcZgAyP6oH9uYr2_iw",
+    authDomain: "cogs-121-project-7d8d8.firebaseapp.com",
+    databaseURL: "https://cogs-121-project-7d8d8.firebaseio.com",
+    projectId: "cogs-121-project-7d8d8",
+    storageBucket: "cogs-121-project-7d8d8.appspot.com",
+    messagingSenderId: "691986028089",
+    appId: "1:691986028089:web:b0b469a1cafffa02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+
+/* var insertButton = document.getElementById('insertButton');
+var dbref = firebase.database().ref().child('users');
+dbref.on('value', snap => insertButton.innerText = snap.val()); */
+// use .on('value' to get notified in real-time whenever anyone
+  // on the internet updates your database. cool!
+
+
+ $(document).ready(() => {
+ const database = firebase.database()
+
+database.ref('users/').on('value', (snapshot) => {
+  const allUsers = snapshot.val();
+  console.log('users/ changed:', allUsers);
+  if (allUsers) {
+    $('#status').html(''); // clear the HTML
+    $('#status').append('List of users:');
+    Object.keys(allUsers).forEach((emails) => {
+      $('#status').append('<li>' + emails + ' ' + allUsers[emails].firstname + ' ' + allUsers[emails].lastname + ' ' + allUsers[emails].email + ' ' + allUsers[emails].password + '</li>');
+    });
+  }
+});
+
+
+ $('#insertButton').click(() => {
+    const emails = $('#inputEmail').val();
+    database.ref('users/' + emails).set({
+      firstname: $('#firstname').val(),
+      lastname: $('#lastname').val(),
+      email: $('#email').val(),
+      password: $('#inputPassword').val()
+
+    });
+  });
+  });
+
+
+</script>
+
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +76,7 @@
 </head>
 
 <body class="bg-dark">
+
 
   <div class="container">
     <div class="card card-register mx-auto mt-5">
@@ -64,7 +121,8 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Register</a>
+        <button id="insertButton">Register</button>
+          <!--   <a class="btn btn-primary btn-block" href="login.html">Register</a> -->
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.html">Login Page</a>

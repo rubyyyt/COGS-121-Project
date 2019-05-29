@@ -26,7 +26,7 @@ Screen Shots:
 
 "milestone5.md contains a written explanation of how you implemented your data display or visualizations, such as which libraries/frameworks you used (if any), how you hooked up to data APIs or databases, etc. (Again, you don't need a fancy visualization, but your data needs to be shown in a way that makes sense for your app.)"
 
-	Warren pls
+	We used Firebase to store users and register schools, and then display them on our index page.
 
 "milestone5.md contains a paragraph describing some more ambitious data display or visualization ideas beyond what you've implemented that would make your app more polished. Note that you do NOT need to implement those ideas, so feel free to be more creative here."
 

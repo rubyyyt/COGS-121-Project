@@ -10,7 +10,7 @@ $(document).ready(() => {
 	var infowindow;
 	var latitude;
 	var longitude;
-	var key = "";
+	var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
 	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
 	//get userlocation
 	var x = document.getElementById("toFill");
@@ -22,12 +22,10 @@ $(document).ready(() => {
   		}
 	}
 
-	function success(position) {
-    	latitude  = position.coords.latitude;
-    	longitude = position.coords.longitude;
-    };
-	//r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
-	//y = r['results'];
+	
+	r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
+	y = r['results'];
+	https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.8843264,-117.21523&radius=80467.2&type=school&keyword=public&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8
 
 
 	//initialize the map
@@ -52,10 +50,7 @@ $(document).ready(() => {
 	//call the search to fill results with search returns
 	function callback(results, status) {
   		if (status == google.maps.places.PlacesServiceStatus.OK) {
-    		for (var i = 0; i < results.length; i++) {
-      			var place = results[i];
-      			$('#toFill').append(place);
-			}
+    		
 		}
 	}	
 });

@@ -21,103 +21,6 @@
   <link href="css/sb-admin.css" rel="stylesheet">
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-
-<!-- Will's Code -->
-<script language = "javascript">
-$(document).ready(() => {
-
-  //Calls the place search script on click of the loadMap button
-  $(function() {
-    $('#loadMap').on("click", (function() {
-
-      // Requires the places library in HTML
-      
-      var map;
-
-      function initMap() {
-        // Create the map: default initialization to UCSD's location for now
-        var pyrmont = {lat: -33.866, lng: 151.196};
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: pyrmont,
-          zoom: 17
-      });
-
-  // Create the places service.
-  var service = new google.maps.places.PlacesService(map);
-  var getNextPage = null;
-  var moreButton = document.getElementById('more');
-  moreButton.onclick = function() {
-    moreButton.disabled = true;
-    if (getNextPage) getNextPage();
-  };
-
-  // Perform a nearby search.
-  service.nearbySearch(
-      {location: pyrmont, radius: 500, type: ['school']},
-      function(results, status, pagination) {
-        if (status !== 'OK') return;
-
-        createMarkers(results);
-        moreButton.disabled = !pagination.hasNextPage;
-        getNextPage = pagination.hasNextPage && function() {
-          pagination.nextPage();
-        };
-      });
-}
-
-function createMarkers(places) {
-  var bounds = new google.maps.LatLngBounds();
-  var placesList = document.getElementById('places');
-
-  for (var i = 0, place; place = places[i]; i++) {
-    var image = {
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(25, 25)
-    };
-
-    var marker = new google.maps.Marker({
-      map: map,
-      icon: image,
-      title: place.name,
-      position: place.geometry.location
-    });
-
-    var li = document.createElement('li');
-    li.textContent = place.name;
-    placesList.appendChild(li);
-
-    bounds.extend(place.geometry.location);
-  }
-  map.fitBounds(bounds);
-}
-    	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      }));
-	});
-});
 </script>
 
 </head>
@@ -181,7 +84,6 @@ function createMarkers(places) {
         </div>
       </li>
     </ul>
-
   </nav>
 
   <div id="wrapper">
@@ -234,93 +136,27 @@ function createMarkers(places) {
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Overview</li>
+          <li class="breadcrumb-item active">Concord High</li>
         </ol>
-
-        <!-- Icon Cards-->
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white o-hidden h-100"
-              style="background-image: url('concordhigh.jpg')">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-graduation-cap"></i>
-                </div>
-                <div class="mr-5"> Concord High </div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="school.html">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <img src="concordhigh.jpg"/>
           </div>
         </div>
-
-        <!-- List Schools-->
+        <!-- School Info-->
         <div class="card mb-3">
           <div class="card-header">
-            <i class="fas fa-chart-area"></i>
-            Find Schools By Location</div>
+            <i class="fas fa-graduation-cap"></i>
+            Concord High</div>
           <div class="card-body">
-            <h1 style="color:#6C6F7D"> Just Cause </h1>
-
-            <button class="button" id="loadMap">Show Schools Near Me</button><br/>
-            <div id="map"></div><br/>
-            <div id="schoolList>"></div>
-
-            Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
-            <div id="button">
-                <button class="button">Find</button> <br/><br/>
-            </div>
-            </div><br/>
+            <!-- Card Text -->
+            The Mt. Diablo Unified School District prohibits discrimination, harassment, intimidation, and bullying based on actual or perceived ancestry, age, color, disability, gender, gender identity, gender expression, nationality, race or ethnicity, religion, sex, sexual orientation, actual or potential parental, family, marital status, or association with a person or a group with one or more of these actual or perceived characteristics. Questions, concerns or complaints regarding compliance with Title IX student issues, please contact the Title IX Compliance Officer, Michael A. Jimenez, Assistant Superintendent High School, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at jimenezma@mdusd.org. Questions, concerns or complaints regarding compliance with Title IX employee issues, please contact the Executive Director of Personnel, Lisa Murphy Oates, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at murphyoatesl@mdusd.org. Questions, concerns or complaints regarding harassment, discrimination, intimidation and bullying, please contact the Equity Compliance Officer, Jennifer Sachs, Executive Director of Instructional Support, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at sachsj@mdusd.org. 
+            <br/>
+            <button class="button">Donate</button><br/>
 
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <div class="card-footer small text-muted">Updated at x time</div>
         </div>
-
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            All Schools</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>School</th>
-                    <th>Location</th>
-                    <th>Type</th>
-                    <th>Donations Needed</th>
-                    <th>Extra info</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>School</th>
-                    <th>Location</th>
-                    <th>Type</th>
-                    <th>Donations Needed</th>
-                    <th>Extra info</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>Concord High</td>
-                    <td>Concord</td>
-                    <td>High School</td>
-                    <td>$30,000</td>
-                    <td>etc.</td>
-                  </tr>
-               </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-
       </div>
       <!-- /.container-fluid -->
 

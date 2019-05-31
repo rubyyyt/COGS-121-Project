@@ -1,10 +1,11 @@
-// TODO: add ES lint
-
 const express = require('express'); //import express library
 const app = express(); //assign to variable (express)
 
-app.use(express.static('static_files')); //so app can serve static file
-// app.use(express.static('views'));		 //use views too?
+// ejs as view engine
+app.set('view engine', 'ejs');
+
+//app.use(express.static('static_files')); //so app can serve static file
+app.use(express.static(__dirname + '/public'));
 
 /* const fakeDatabase = {
 	'miramonte': {location: 'Orinda', income: 'High', pic: 'miramonte.jpg'},
@@ -39,6 +40,39 @@ app.engine('html', require('ejs').renderFile); */
 //displays register.html file that we created
 
 // start the server at URL: http://localhost:3000/
+
+// @Ruby put the JSON inside of firebase and get mapData to 
+//	pull from firebase 
+const mapData = require('./mapData.json');
+
+// Index page
+app.get('/', function(req, res) {
+	res.render('pages/index', {
+		data: mapData.results
+	});
+});
+
+app.get('blank', function(req, res) {
+	res.render('pages/blank');
+});
+app.get('forgot-password', function(req, res) {
+	res.render('pages/forgot-password');
+});
+app.get('login', function(req, res) {
+	res.render('pages/login');
+});
+app.get('register', function(req, res) {
+	res.render('pages/register');
+});
+app.get('school', function(req, res) {
+	res.render('pages/school');
+});
+
+// Catch all pages that don't exist
+app.get('*', function(req, res) {
+	res.render('pages/404');
+});
+
 app.listen(8080, () => {
   console.log('Server started at http://localhost:8080/');
 });

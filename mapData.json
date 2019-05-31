@@ -1,0 +1,569 @@
+{
+   "html_attributions" : [],
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.754058,
+               "lng" : -117.079996
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.75540752989272,
+                  "lng" : -117.0783766701073
+               },
+               "southwest" : {
+                  "lat" : 32.75270787010728,
+                  "lng" : -117.0810763298927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "7a0e231e84e8ffb90cd5bd6446d5cf1d6e0a1549",
+         "name" : "Thrive Public Schools",
+         "photos" : [
+            {
+               "height" : 480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115344923841868094587/photos\"\u003eThrive Public School\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAKCs8WXZ3tgTMQINIa7Fr_AlclfgTLozt9cp06TEPWCcbaArFiD7T0omTl0Lxpcztr8u_OD6xI07J6MJh6AnGXgM0_u14ddc0fU-4DfDfrtf1qC2_LROsR6D9kfWsvePnEhCEbHkhiR393EfaP66I8GOhGhSVEaCg9VsUSmW4dbmwtPUPzoBbpg",
+               "width" : 640
+            }
+         ],
+         "place_id" : "ChIJvc5X-h9U2YARL_WD33xGvTQ",
+         "plus_code" : {
+            "compound_code" : "QW3C+J2 San Diego, California",
+            "global_code" : "8544QW3C+J2"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJvc5X-h9U2YARL_WD33xGvTQ",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 15,
+         "vicinity" : "4260 54th St, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.7936216,
+               "lng" : -117.1621821
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.79512007989273,
+                  "lng" : -117.1606843701073
+               },
+               "southwest" : {
+                  "lat" : 32.79242042010728,
+                  "lng" : -117.1633840298928
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "0474b2a36da166c378e69f9f3550abc118de592d",
+         "name" : "Chesterton Public Elementary School",
+         "photos" : [
+            {
+               "height" : 720,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110722256291554711746/photos\"\u003eCameron Mcbee\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAbtQ4PBPNhefZ60S2EiY4RcPM85AqkDCJ6IPE-_4k3JTk2VeEgsouCkfWO4T26-r-d5KRk0_PY2PMFgdWrFkRrAHln1cXXHOvCyAx0r9w00ZBRZZqB2bM8BGxSINsHmqsEhA0DdaPdUqLBetv71OoDk_aGhQnXBsagAoXU--z_LnGe1-JXTX3fA",
+               "width" : 1280
+            }
+         ],
+         "place_id" : "ChIJp76gaFdV2YARmjRrRiLA5BE",
+         "plus_code" : {
+            "compound_code" : "QRVQ+C4 San Diego, California",
+            "global_code" : "8544QRVQ+C4"
+         },
+         "rating" : 5,
+         "reference" : "ChIJp76gaFdV2YARmjRrRiLA5BE",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 6,
+         "vicinity" : "7335 Wheatley St, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.707052,
+               "lng" : -117.139812
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.70840187989272,
+                  "lng" : -117.1386627201073
+               },
+               "southwest" : {
+                  "lat" : 32.70570222010728,
+                  "lng" : -117.1413623798927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "0510fa84c46ec24ec01285ff9da0b3dd0d8387bc",
+         "name" : "King Chavez Public School",
+         "place_id" : "ChIJnZLhsG9T2YARTc6syXxuT_s",
+         "plus_code" : {
+            "compound_code" : "PV46+R3 San Diego, California",
+            "global_code" : "8544PV46+R3"
+         },
+         "rating" : 0,
+         "reference" : "ChIJnZLhsG9T2YARTc6syXxuT_s",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "137 25th St, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.7026259,
+               "lng" : -117.1500917
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.70402572989272,
+                  "lng" : -117.1486928201073
+               },
+               "southwest" : {
+                  "lat" : 32.70132607010728,
+                  "lng" : -117.1513924798927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "00f8f73438e0f964a8e99a8bcaaa5e783672184d",
+         "name" : "Monarch School",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 1920,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109035483430668395009/photos\"\u003eAksel Borker\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAKTHiH3SmnasAE8GguB9EKXFNmPebcp62axFfZrgu7jjxxHug7reu0krz_nokhPGu7KdIAh3jRnC39T5edlp1HU-Far1aI83j4vBeufs7Bf28b6U9JLmXW_bgQpAA7ZU2EhD4_2O1TyygZoga0HSToAH-GhRWo43SWbHqaS-jXjFB6wme-u2yaQ",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJlerRna1U2YARyCEvprbXzxY",
+         "plus_code" : {
+            "compound_code" : "PR3X+3X San Diego, California",
+            "global_code" : "8544PR3X+3X"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJlerRna1U2YARyCEvprbXzxY",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 20,
+         "vicinity" : "1625 Newton Ave, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.6874589,
+               "lng" : -117.0896821
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.68890857989272,
+                  "lng" : -117.0883662701073
+               },
+               "southwest" : {
+                  "lat" : 32.68620892010727,
+                  "lng" : -117.0910659298927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "ff1b5dd050cf1a9276e65676bf5c5739de7c38a7",
+         "name" : "Rancho de la Nación Elementary",
+         "photos" : [
+            {
+               "height" : 2048,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115179875375353541709/photos\"\u003eEllaine Nieva\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRZAAAA6WHVlOB1Ob-4lTANuXWpbMAcCpecDVi1jWi37m9aCeEhuOXt0-ODHXMMEGk2ffJsYVHf-nZPfmP-P_eJSkJfNmRCwTLgwtPgMlksmmlVXdoMfJKrzhWAX-j-8fsqo0D8EhAZ05n-pG4jSBXdoDJhlWL0GhSqHXC4IoeWFx6woTPqERB1NG-cPA",
+               "width" : 1152
+            }
+         ],
+         "place_id" : "ChIJmQBNZi1S2YARcTibcJI804k",
+         "plus_code" : {
+            "compound_code" : "MWP6+X4 National City, California",
+            "global_code" : "8544MWP6+X4"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJmQBNZi1S2YARcTibcJI804k",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 10,
+         "vicinity" : "1830 Division St, National City"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.9541335,
+               "lng" : -117.1988934
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.95553302989272,
+                  "lng" : -117.1978657201073
+               },
+               "southwest" : {
+                  "lat" : 32.95283337010728,
+                  "lng" : -117.2005653798927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "ec15e2244ef68b591e22eb3076e858de1b44b3a5",
+         "name" : "Sycamore Ridge School",
+         "photos" : [
+            {
+               "height" : 508,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117633846830572245904/photos\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAd5jghF-9bEd2Rkneaq3HUo6SSxx8cQG9lZLWae58FeQYCB2ZO-8LyWPYgshFvROpQ2pSGObtqIKpyMrgRjZqZqWNAwe9DjF5d5oAunfK6birZckOFcg9zJdEZ62Gsao_EhC2uorcBJoYHWVJX2ggXeVBGhQsjkFuLVjNbVZ0khqPuMOb501jdQ",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJY5fFcHUI3IARFRWC0lTn_Q4",
+         "plus_code" : {
+            "compound_code" : "XR32+MC San Diego, California",
+            "global_code" : "8544XR32+MC"
+         },
+         "rating" : 4,
+         "reference" : "ChIJY5fFcHUI3IARFRWC0lTn_Q4",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 9,
+         "vicinity" : "5333 Old Carmel Valley Rd, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.7941465,
+               "lng" : -117.1539666
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.79549622989272,
+                  "lng" : -117.1528019201073
+               },
+               "southwest" : {
+                  "lat" : 32.79279657010728,
+                  "lng" : -117.1555015798927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "48027116b6579d9d2646889161fe5d476c80fa2a",
+         "name" : "Mesa Region Court School",
+         "place_id" : "ChIJO-tFJFxV2YARVYw1UTtQTag",
+         "plus_code" : {
+            "compound_code" : "QRVW+MC San Diego, California",
+            "global_code" : "8544QRVW+MC"
+         },
+         "rating" : 0,
+         "reference" : "ChIJO-tFJFxV2YARVYw1UTtQTag",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "2801 Meadow Lark Dr, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.7958367,
+               "lng" : -116.9548773
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.79718687989272,
+                  "lng" : -116.9535087201073
+               },
+               "southwest" : {
+                  "lat" : 32.79448722010727,
+                  "lng" : -116.9562083798927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "46725d5768770420661f3ce8dd7d38ea9a05dc94",
+         "name" : "Cajon Valley Community Day School",
+         "place_id" : "ChIJD73_xLBZ2YARS-IZVkKY0tk",
+         "plus_code" : {
+            "compound_code" : "Q2WW+82 El Cajon, California",
+            "global_code" : "8545Q2WW+82"
+         },
+         "rating" : 0,
+         "reference" : "ChIJD73_xLBZ2YARS-IZVkKY0tk",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "165 Roanoke Rd, El Cajon"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.822789,
+               "lng" : -117.1032682
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.82438612989272,
+                  "lng" : -117.1019243701073
+               },
+               "southwest" : {
+                  "lat" : 32.82168647010727,
+                  "lng" : -117.1046240298927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "5649107b77f476d2c326b04d32aef2aa297cc194",
+         "name" : "The Charter School of San Diego",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 700,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111502893998556907198/photos\"\u003eThe Charter School of San Diego - Tierrasanta Learning Center\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAFnZbqLNv1rQ5YiEPZdUbbaEPS1ziHiNaD2YP4MfRqLg9SGZLZi9yF0dMHWWdxQpgoDgAXwPt1JFMyJ2Tl26SZPjlF3TP3Z9_ICXMIlIBg5Fve3PwguzvRFqR5qWsNyDEEhDYvgHMxKwJinvqinhFokZbGhQaK33QSu1ogjBYsoBZkfkRXLdjyw",
+               "width" : 1240
+            }
+         ],
+         "place_id" : "ChIJ7-QvVz3-24ARH7bWuwMnkrI",
+         "plus_code" : {
+            "compound_code" : "RVFW+4M San Diego, California",
+            "global_code" : "8544RVFW+4M"
+         },
+         "rating" : 4,
+         "reference" : "ChIJ7-QvVz3-24ARH7bWuwMnkrI",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "10425 Tierrasanta Blvd, San Diego"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 33.2252191,
+               "lng" : -117.2226288
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 33.22639087989273,
+                  "lng" : -117.2212808701073
+               },
+               "southwest" : {
+                  "lat" : 33.22369122010728,
+                  "lng" : -117.2239805298927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "2ef1a9a36e2b7ee18977c5503880410c22b6203f",
+         "name" : "North Star Academy",
+         "place_id" : "ChIJNetTuPV23IAR62fLvO5DIVM",
+         "plus_code" : {
+            "compound_code" : "6QGG+3W Vista, California",
+            "global_code" : "85546QGG+3W"
+         },
+         "rating" : 0,
+         "reference" : "ChIJNetTuPV23IAR62fLvO5DIVM",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "1250 Arcadia Ave, Vista"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 33.237138,
+               "lng" : -117.020436
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 33.23866987989272,
+                  "lng" : -117.01757355
+               },
+               "southwest" : {
+                  "lat" : 33.23597022010728,
+                  "lng" : -117.02139015
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "91c88c419a6ada22e88203a86fdf97a172391731",
+         "name" : "Valley Center-Pauma Unified School District",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 2160,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111046031257829582513/photos\"\u003eRu HernAlva\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAPphY7U-wTuX8AwzxM5D7e8D9PtwITuLzgeoIOzanEoYcNvdHVjthjj7Y5wOAhlkWTCw1ep3qGjnGBVkczE7ERtq3UEUbjp6rUlvXTFarPT9XjPqmU2kKRpcrU_h5n2n8EhAyAM7qFfH3FVQQpe81VHzeGhS3buPvD4ool-0uRl8_P3_4kLdt2g",
+               "width" : 3840
+            }
+         ],
+         "place_id" : "ChIJLfkUUc6N24ARPupd4raFQDk",
+         "plus_code" : {
+            "compound_code" : "6XPH+VR Valley Center, California",
+            "global_code" : "85546XPH+VR"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJLfkUUc6N24ARPupd4raFQDk",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 7,
+         "vicinity" : "28751 Cole Grade Rd, Valley Center"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.5371165,
+               "lng" : -117.0639892
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.53846857989272,
+                  "lng" : -117.0627160701073
+               },
+               "southwest" : {
+                  "lat" : 32.53576892010727,
+                  "lng" : -117.0654157298927
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "6fff63290b6aca401b8c5afecb2ef01dfd5f48d2",
+         "name" : "De Tijuana Municipal High School",
+         "photos" : [
+            {
+               "height" : 1440,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104637035120133195655/photos\"\u003eIsmael Guicho\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAfl4tW__PIVVYX11vt-08ovvxqGxfX4NgoZc_w81uv9pX6KA4_5lKEnX4BA47GmpYzuL3U7G_UmKz85Rj2GU-dUxk7QRZn6tjh-n-74JQPg-a36tT0mUNs4mo-1Mtano1EhBGeuRWvDjZanqdtB_9A-FjGhQyZeWScqHNDwaklrstGkZk5BP_4A",
+               "width" : 2560
+            }
+         ],
+         "place_id" : "ChIJ0SaPt3FJ2YARoh3K3hZfOQc",
+         "plus_code" : {
+            "compound_code" : "GWPP+RC Tijuana, Baja California, Mexico",
+            "global_code" : "8544GWPP+RC"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ0SaPt3FJ2YARoh3K3hZfOQc",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 12,
+         "vicinity" : "Mar Báltico, Alemán, Centro, Tijuana"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.8006131,
+               "lng" : -116.9355369
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.80196302989273,
+                  "lng" : -116.9342655201073
+               },
+               "southwest" : {
+                  "lat" : 32.79926337010728,
+                  "lng" : -116.9369651798928
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "e1fe20fbfd59ee2c3414eb4a8dce0d9b1664b066",
+         "name" : "Diego Valley East Public Charter School - El Cajon",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 3840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109749611813640550232/photos\"\u003eDiego Valley Public High School- El Cajon\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAKZBQWi3QHJjKyUvluPMGb2a1O4UoZLX96mGdH2LMQ4Ew5-ymh9TCwHRwb4CZyDH3y44vuUSFajA2SXCxrA2GBT6DEZZAW4jdeZp8VGhgAmIjBXOMH4ycwRKmp7O4FJPaEhClLYwDmq3rXT-avBBauWkhGhR3m-rqaNx91Ck_7Z6sXMfNNvOsqA",
+               "width" : 5760
+            }
+         ],
+         "place_id" : "ChIJr6utUwZZ2YARekz0Wm8mr64",
+         "plus_code" : {
+            "compound_code" : "R327+6Q El Cajon, California",
+            "global_code" : "8545R327+6Q"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJr6utUwZZ2YARekz0Wm8mr64",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 12,
+         "vicinity" : "511 N 2nd St, El Cajon"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : 32.461712,
+               "lng" : -116.930875
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.46292172989271,
+                  "lng" : -116.9296519701073
+               },
+               "southwest" : {
+                  "lat" : 32.46022207010727,
+                  "lng" : -116.9323516298928
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
+         "id" : "4610e4275a6fe3f7e589ef123aa6dd5bd4783736",
+         "name" : "Colegio Reino Unido",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 1186,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110287539480265548938/photos\"\u003eColegio Reino Unido\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRZAAAA-4tFfw952dT-zLxf061-_Aph-i66PBj-YaFZRJ7mRPkCEbLeXsGETqQrEO3zAPX96fnTuEx5oC1k7X1T2F1dkYWkg6j6wDy9ALdk21XYvxk6FxB6lFt9nCSRHSXUbJzeEhBLMWSpPLpU-v2EH4h8PYC4GhQwGYyZYNaANH8ZJxXUYqSiULkB1Q",
+               "width" : 2652
+            }
+         ],
+         "place_id" : "ChIJ7__H3w452YARJeJo777OqZA",
+         "plus_code" : {
+            "compound_code" : "F369+MJ Tijuana, Baja California, Mexico",
+            "global_code" : "8545F369+MJ"
+         },
+         "rating" : 0,
+         "reference" : "ChIJ7__H3w452YARJeJo777OqZA",
+         "scope" : "GOOGLE",
+         "types" : [ "school", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0,
+         "vicinity" : "Avenida las Amapolas 17310, Jardines de La Mesa, Tijuana"
+      }
+   ],
+   "status" : "OK"
+}

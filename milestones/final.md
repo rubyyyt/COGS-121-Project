@@ -36,4 +36,5 @@ navigation.ejs:
 
 
 Link to Google slide:
+
 https://docs.google.com/presentation/d/1yVrn05H6D2bwo5-y9HTkYrGKfB7jVJlxFnJFch5Y82I/edit?usp=sharing

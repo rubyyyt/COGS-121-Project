@@ -52,19 +52,25 @@ app.get('/', function(req, res) {
 	});
 });
 
-app.get('blank', function(req, res) {
+app.get('/index', function(req, res) {
+	res.render('pages/index', {
+		data: mapData.results
+	});
+});
+
+app.get('/blank', function(req, res) {
 	res.render('pages/blank');
 });
-app.get('forgot-password', function(req, res) {
+app.get('/forgot-password', function(req, res) {
 	res.render('pages/forgot-password');
 });
-app.get('login', function(req, res) {
+app.get('/login', function(req, res) {
 	res.render('pages/login');
 });
-app.get('register', function(req, res) {
+app.get('/register', function(req, res) {
 	res.render('pages/register');
 });
-app.get('school', function(req, res) {
+app.get('/school', function(req, res) {
 	res.render('pages/school');
 });
 

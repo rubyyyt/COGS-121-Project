@@ -6,8 +6,7 @@ Member Contributions: In each milestone, we changed up our roles a bit depending
 
 Source Code Files:
 
-app.js: the main file that the application is run on. This file serves ejs files 
-        and performs the REST operations.
+app.js: the main file that the application is run on. This file serves ejs files and performs the REST operations.
 
 404.ejs: catches all pages that do not exist.
 
@@ -15,15 +14,15 @@ blank.ejs: an example blank page that did not make it into our working product
 
 forgot-password.ejs: a non-functioning forgotten password page.
 
-index.ejs: the main page for the application. 
+index.ejs: the main page for the application.
 
 login.ejs: allows users to login
 
-register.ejs: page where philanthropists can register an account 
+register.ejs: page where philanthropists can register an account
 
 maps.html: Used for the google maps api
 
-register.ejs: page where schools can register an account 
+register.ejs: page where schools can register an account
 
 school.ejs: used to display the school information
 
@@ -39,11 +38,9 @@ mapsscript.js: script to handle the google map functions on the index page
 
 index.css: css outline that handles google map functions on index page
 
-
 Link to Google slide:
 
 https://docs.google.com/presentation/d/1yVrn05H6D2bwo5-y9HTkYrGKfB7jVJlxFnJFch5Y82I/edit?usp=sharing
-
 
 Link to Demo video:
 

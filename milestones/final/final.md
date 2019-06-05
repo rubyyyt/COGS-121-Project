@@ -18,11 +18,11 @@ home.html:
 
 index.ejs:
 
-login.ejs: allows philanthropists to login
+login.ejs: allows users to login
 
 maps.html:
 
-register.ejs: page where philanthropists can register an account 
+register.ejs: page where schools can register an account 
 
 school.ejs:
 

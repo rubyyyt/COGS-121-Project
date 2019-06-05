@@ -1,5 +1,17 @@
+<!--File Description: used to display the school information -->
+
 <!DOCTYPE html>
 <html lang="en">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!--closes the modal-->
+<script type="text/javascript">
+$('#donateBtn').click(function() {
+    $('#modalWindow').modal('hide');
+});
+</script>
 
 <head>
 
@@ -41,7 +53,9 @@
             <!-- Card Text -->
             The Mt. Diablo Unified School District prohibits discrimination, harassment, intimidation, and bullying based on actual or perceived ancestry, age, color, disability, gender, gender identity, gender expression, nationality, race or ethnicity, religion, sex, sexual orientation, actual or potential parental, family, marital status, or association with a person or a group with one or more of these actual or perceived characteristics. Questions, concerns or complaints regarding compliance with Title IX student issues, please contact the Title IX Compliance Officer, Michael A. Jimenez, Assistant Superintendent High School, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at jimenezma@mdusd.org. Questions, concerns or complaints regarding compliance with Title IX employee issues, please contact the Executive Director of Personnel, Lisa Murphy Oates, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at murphyoatesl@mdusd.org. Questions, concerns or complaints regarding harassment, discrimination, intimidation and bullying, please contact the Equity Compliance Officer, Jennifer Sachs, Executive Director of Instructional Support, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at sachsj@mdusd.org. 
             <br/>
-            <button class="button">Donate</button><br/>
+            <div class="text-center">
+              <a href="" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalContactForm">Donate Here!</a>
+            </div><br/>
 
           </div>
           <div class="card-footer small text-muted">Updated at x time</div>
@@ -87,6 +101,64 @@
       </div>
     </div>
   </div>
+
+  <!--donate modal-->
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document" id="modalWindow">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Donate To <%= data.name %></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Donor Name (Optional)</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Donor Email</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Personal Note (Optional)</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-outline-primary" id="donateBtn" data-dismiss="modal" data-toggle="modal" data-target="#thankYouModal">Donate!<i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--Thank you modal-->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+    <div class="modal-dialog" role="document" id="modalWindow2">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Thank you for your donation to <%= data.name %>!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-outline-primary"  data-dismiss="modal">You're Welcome!<i class="fas fa-paper-plane-o ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <% include ../partials/footer %>
 

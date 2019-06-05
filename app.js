@@ -1,5 +1,6 @@
 const express = require('express'); //import express library
 const app = express(); //assign to variable (express)
+const request = require("request");
 
 // ejs as view engine
 app.set('view engine', 'ejs');
@@ -43,14 +44,15 @@ app.engine('html', require('ejs').renderFile); */
 
 // @Ruby put the JSON inside of firebase and get mapData to 
 //	pull from firebase 
-const mapData = require('./mapData.json');
+
+//let mapData = require('./mapData.json');
+let mapData = require('./testData.json');
 
 // Schools pages
 app.get('/school/:index', function(req, res) {
 	let results = mapData.results;
 	let i = req.params.index
 	const schoolData = results[i];
-	console.log(schoolData);
 	res.render('pages/school', {
 		data: schoolData
 	});
@@ -82,7 +84,26 @@ app.get('/login', function(req, res) {
 app.get('/register', function(req, res) {
 	res.render('pages/register');
 });
+app.get('/schoolList', function(req, res) {
+	res.render('pages/schoolList');
+});
 
+app.get('/json/:uri', function(req, res) {
+	let uri = decodeURIComponent(req.params.uri);
+
+	request({
+		url: uri,
+		json: true
+	}, function (error, response, body){
+		if (!error && response.statusCode === 200) {
+			mapData = body;
+		}
+	});
+
+	res.render('pages/index', {
+		data: mapData.results
+	});
+});
 
 // Catch all pages that don't exist
 app.get('*', function(req, res) {

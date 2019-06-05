@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
   <% include ../partials/head %>
 
-<!-- Will's Code-->
-<script language = "javascript">
-$(document).ready(() => {
+  <!-- Will's Code-->
+  <script language = "javascript">
+  $(document).ready(() => {
 
-  //Toggle the presence of the map
-  $(function() {
-    $('#loadMap').on("click", (function() {
-      $('#map').toggle();
-      google.maps.event.trigger(map, 'resize');
-      $('#right-panel').toggle();
+    //Toggle the presence of the map
+    $(function() {
+      $('#loadMap').on("click", (function() {
+        $('#map').toggle();
+        google.maps.event.trigger(map, 'resize');
+        $('#right-panel').toggle();
 
-    }));
+      }));
+    });
   });
-});
-</script>
-
+  </script>
 </head>
 
 <body id="page-top">
@@ -77,17 +77,18 @@ $(document).ready(() => {
         <div class="card mb-3" style="height:100%; width: 100%;">
           <div class="card-header">
             <i class="fas fa-chart-area"></i>
-            Find Schools By Location</div>
+            Find Schools By Location
+          </div>
           <div class="card-body" style="height:100%; width: 100%;">
             <h1 style="color:#6C6F7D"> Just Cause </h1>
 
             <button class="button" id="loadMap">Show Schools Near Me</button><br/>
             <div id="map" class="initiallyHidden"></div>
-              <div id="right-panel" class="initiallyHidden">
+            <div id="right-panel" class="initiallyHidden">
                 <h2 class="maps">Results</h2>
                 <ul id="places" class="maps"></ul>
                 <button id="more">More results</button>
-              </div>
+            </div>
 
             
             Find a Specific School<br/> <input id="nameBox" type="text" size="20";/>
@@ -96,7 +97,6 @@ $(document).ready(() => {
             </div>
             </div><br/>
 
-          </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
 

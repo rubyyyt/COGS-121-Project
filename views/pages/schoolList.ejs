@@ -1,62 +1,77 @@
 <html>
 <!--to the list of the nearest schools on map load-->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8&libraries=places"></script>
-<script language = "javascript">
-$(document).ready(() => {
+<head>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script language = "javascript">
+    let map;
+    let service;
+    let infowindow;
+    let latitude;
+    let longitude;
+    let key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
+    let url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
+    //get userlocation
+    let x = document.getElementById("toFill");
 
-	var map;
-	var service;
-	var infowindow;
-	var latitude;
-	var longitude;
-	var key = "AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8";
-	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?";
-	//get userlocation
-	var x = document.getElementById("toFill");
-	function getLocation() {
-  		if (navigator.geolocation) {
-    		navigator.geolocation.getCurrentPosition(showPosition);
-  		} else {
-    		x.innerHTML = "Geolocation is not supported by this browser.";
-  		}
-	}
+    function getLocation() {
+        if (navigator.geolocation) {
+          let position = navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          console.log("geolocation is not supported");
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
 
-	
-	r = json.get(url + 'location=' + latitude + ', ' + longitude + '&radius=80467.2&rankby=distance&type=school&keyword=public&key=' + key);
-	y = r['results'];
-	https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=32.8843264,-117.21523&radius=80467.2&type=school&keyword=public&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8
+    }
+
+    function showPosition(position) {
+      latitude = position.coords.latitude;
+      longitude = position.coords.longitude;
+
+      let newUrl = url + "location=" + latitude + "%2C" + longitude + "&radius=80467.2&type=school&keyword=public&key=" + key; 
+      let uri = encodeURIComponent(newUrl);
+      window.location.href = '/json/' + uri;
+      //let r = $.getJSON(newUrl);
+      //let y = r[1];
+    }
 
 
-	//initialize the map
-	function initialize() {
-  		var localt = new google.maps.LatLng(latitude, longitude);
+    //initialize the map
+    /*
+    function initialize() {
+        var localt = new google.maps.LatLng(latitude, longitude);
 
-  		map = new google.maps.Map(document.getElementById('map'), {
-      		center: local,
-      		zoom: 15
-    	});
-  		//setup the search request for nearby public schools
-  		var request = {
-    		location: local,
-    		radius: '80467',
-    		type: ['school'],
-    		
-  		};
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: local,
+            zoom: 15
+        });
+        //setup the search request for nearby public schools
+        var request = {
+          location: local,
+          radius: '80467',
+          type: ['school'],
+          
+        };
 
-  		service = new google.maps.places.PlacesService(map);
-  		results = service.nearbySearch(request, callback);
-	}
-	//call the search to fill results with search returns
-	function callback(results, status) {
-  		if (status == google.maps.places.PlacesServiceStatus.OK) {
-    		
-		}
-	}	
-});
-</script>
+        service = new google.maps.places.PlacesService(map);
+        results = service.nearbySearch(request, callback);
+    }
+    //call the search to fill results with search returns
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          
+      }
+    }	
+  */
+  </script>
+</head>
 
-<!--div to be filled and displayed on homepage-->
-<div id="toFill"></div>
-
+<body>
+  <!--div to be filled and displayed on homepage-->
+  <span id="json">
+  
+  </span>
+    <button type="button" onclick="getLocation()">test</button>
+</body>
 </html>

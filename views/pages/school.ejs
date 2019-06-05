@@ -8,106 +8,8 @@
 </head>
 
 <body id="page-top">
-	  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Just Cause</a>
-
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-
-    <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"><!-- Alerts number --></i>
-          <span class="badge badge-danger"></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-          <a class="dropdown-item" href="#">Alert 1</a>
-          <a class="dropdown-item" href="#">Alert 2</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"> Alert Settings </a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-envelope fa-fw"></i>
-          <span class="badge badge-danger"><!-- Messages number --></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
-          <a class="dropdown-item" href="#">Check Messages</a>
-          <a class="dropdown-item" href="#">Send Messages</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Message Settings</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown no-arrow">
-        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-circle fa-fw"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Activity Log</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-
-  <div id="wrapper">
-
-    <!-- Sidebar -->
-    <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <h6 class="dropdown-header">Login Screens:</h6>
-          <a class="dropdown-item" href="login">Login</a>
-          <a class="dropdown-item" href="register">Register</a>
-          <a class="dropdown-item" href="forgot-password">Forgot Password</a>
-          <div class="dropdown-divider"></div>
-          <h6 class="dropdown-header">Other Pages:</h6>
-          <a class="dropdown-item" href="404.html">404 Page</a>
-          <a class="dropdown-item" href="blank">Blank Page</a>
-        </div>
-      </li>
-      <!-- Template for nav- item-->
-      <!--
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
-      -->
-    </ul>
+  <% include ../partials/navigation %>
 
     <div id="content-wrapper">
 
@@ -118,18 +20,23 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Concord High</li>
+          <li class="breadcrumb-item active"> <%= data.name %> </li>
         </ol>
         <div class="card mb-3">
           <div class="card-body">
-            <img src="concordhigh.jpg"/>
+            <% if (data.photos != null) { %>
+            
+              <img src="
+                https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&maxheight=400&key=AIzaSyDraW-Ju21u9OHTgNB2fdSUrgu3ih2jlw8&photoreference=<%= data.photos[0].photo_reference%>
+              "/>
+            <% } %>
           </div>
         </div>
         <!-- School Info-->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-graduation-cap"></i>
-            Concord High</div>
+            <%= data.name %></div>
           <div class="card-body">
             <!-- Card Text -->
             The Mt. Diablo Unified School District prohibits discrimination, harassment, intimidation, and bullying based on actual or perceived ancestry, age, color, disability, gender, gender identity, gender expression, nationality, race or ethnicity, religion, sex, sexual orientation, actual or potential parental, family, marital status, or association with a person or a group with one or more of these actual or perceived characteristics. Questions, concerns or complaints regarding compliance with Title IX student issues, please contact the Title IX Compliance Officer, Michael A. Jimenez, Assistant Superintendent High School, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at jimenezma@mdusd.org. Questions, concerns or complaints regarding compliance with Title IX employee issues, please contact the Executive Director of Personnel, Lisa Murphy Oates, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at murphyoatesl@mdusd.org. Questions, concerns or complaints regarding harassment, discrimination, intimidation and bullying, please contact the Equity Compliance Officer, Jennifer Sachs, Executive Director of Instructional Support, at 1936 Carlotta Drive, Concord, CA 94519, by phone (925) 682-8000, or email at sachsj@mdusd.org. 
@@ -182,18 +89,6 @@
   </div>
 
   <% include ../partials/footer %>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin.min.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
 
 </body>
 

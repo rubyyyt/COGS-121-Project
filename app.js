@@ -45,6 +45,17 @@ app.engine('html', require('ejs').renderFile); */
 //	pull from firebase 
 const mapData = require('./mapData.json');
 
+// Schools pages
+app.get('/school/:index', function(req, res) {
+	let results = mapData.results;
+	let i = req.params.index
+	const schoolData = results[i];
+	console.log(schoolData);
+	res.render('pages/school', {
+		data: schoolData
+	});
+});
+
 // Index page
 app.get('/', function(req, res) {
 	res.render('pages/index', {
@@ -58,6 +69,7 @@ app.get('/index', function(req, res) {
 	});
 });
 
+// Misc Pages
 app.get('/blank', function(req, res) {
 	res.render('pages/blank');
 });
@@ -70,15 +82,15 @@ app.get('/login', function(req, res) {
 app.get('/register', function(req, res) {
 	res.render('pages/register');
 });
-app.get('/school', function(req, res) {
-	res.render('pages/school');
-});
+
 
 // Catch all pages that don't exist
 app.get('*', function(req, res) {
 	res.render('pages/404');
 });
 
+
+// Ready and listening
 app.listen(8080, () => {
   console.log('Server started at http://localhost:8080/');
 });

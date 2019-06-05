@@ -20,19 +20,21 @@ index.ejs:
 
 login.ejs: allows philanthropists to login
 
-maps.html:
-
 register.ejs: page where philanthropists can register an account 
 
 school.ejs:
 
-schoolList.ejs:
+schoolList.ejs: script that via google maps api, generates the list of schools nearby into a json to then be displayed in index
 
 footer.ejs: creates consistent footer with working links across all pages of the app
 
 head.ejs: creates consistent header with working links across all pages of the app
 
 navigation.ejs:
+
+mapsscript.js: script to handle the google map functions on the index page
+
+index.css: css outline that handles google map functions on index page
 
 
 Link to Google slide:

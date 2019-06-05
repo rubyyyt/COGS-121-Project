@@ -1,3 +1,5 @@
+// Script to handle the google map functions on the index page
+
 var map;
 
       function initMap() {

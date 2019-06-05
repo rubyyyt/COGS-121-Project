@@ -1,3 +1,6 @@
+// the main file that the application is run on. This file serves ejs files
+// and performs the REST operations.
+
 const express = require('express'); //import express library
 const app = express(); //assign to variable (express)
 const request = require("request");

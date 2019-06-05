@@ -126,9 +126,9 @@
                 <button id="more">More results</button>
             </div>
 
-            <br/> 
+            
             <div id="button">
-                <button class="button" onclick="getLocation()">Find Schools</button> <br/><br/>
+                <button class="button" onclick="getLocation()"> Show Schools Near Me</button> <br/><br/>
             </div>
             </div><br/>
 

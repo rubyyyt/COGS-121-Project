@@ -46,7 +46,7 @@ app.engine('html', require('ejs').renderFile); */
 //	pull from firebase 
 
 //let mapData = require('./mapData.json');
-let mapData = require('./testData.json');
+let mapData;
 
 // Schools pages
 app.get('/school/:index', function(req, res) {
@@ -61,13 +61,13 @@ app.get('/school/:index', function(req, res) {
 // Index page
 app.get('/', function(req, res) {
 	res.render('pages/index', {
-		data: mapData.results
+		data: mapData
 	});
 });
 
 app.get('/index', function(req, res) {
 	res.render('pages/index', {
-		data: mapData.results
+		data: mapData
 	});
 });
 
@@ -100,9 +100,7 @@ app.get('/json/:uri', function(req, res) {
 		}
 	});
 
-	res.render('pages/index', {
-		data: mapData.results
-	});
+	res.redirect('/');
 });
 
 // Catch all pages that don't exist
